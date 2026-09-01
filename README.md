@@ -29,9 +29,8 @@ node serve.mjs
 
 ## 公開給別人看
 
-1. **GitHub Pages（固定網址）**  
-   推上 `main` 後開啟 Pages，網址形如：  
-   `https://<帳號>.github.io/xinse-preview/`
+1. **GitHub Pages（固定網址，關電腦也還在）**  
+   https://gabe45665x.github.io/xinse-preview/
 
 2. **臨時公開隧道**  
    先開 `雙擊預覽.bat`，再雙擊 `公開預覽.bat`。視窗會印出 `https://*.trycloudflare.com` 連結，關掉視窗連結就失效。
