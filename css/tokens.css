@@ -1,0 +1,112 @@
+/* 新色 XINSE — ecup78 結構對齊，紫色色調
+   黑底夜刊 + 紫羅蘭，不是夜店霓虹。 */
+
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=JetBrains+Mono:wght@500;700&family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@500;700&display=swap");
+
+:root {
+  --ink: #0a0a0c;
+  --ink-2: #120f18;
+  --ink-3: #1a1626;
+  --paper: #fdfbf8;
+  --paper-dim: rgba(253, 251, 248, 0.92);
+  --paper-mute: rgba(253, 251, 248, 0.62);
+
+  --accent: #9d4edd;
+  --accent-2: #c77dff;
+  --accent-deep: #7b2cbf;
+  --accent-rgb: 157 78 221;
+  --accent-2-rgb: 199 125 255;
+  --accent-glow: rgb(var(--accent-rgb) / 0.28);
+  --accent-soft: rgb(var(--accent-rgb) / 0.12);
+
+  --gold: #d4b8f0;
+  --gold-2: #ead9ff;
+  --gold-glow: rgba(212, 184, 240, 0.22);
+  --green: #34d399;
+
+  --rule: rgba(245, 239, 229, 0.1);
+  --rule-bold: rgba(245, 239, 229, 0.22);
+  --hairline: rgba(245, 239, 229, 0.06);
+  --hairline-strong: rgba(245, 239, 229, 0.12);
+
+  --display: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  --sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+  --serif: "Noto Serif TC", "Songti TC", serif;
+  --display-zh: "Noto Serif TC", "Songti TC", serif;
+  --display-latin: "Cinzel", "Times New Roman", serif;
+  --serif-latin: "Cormorant Garamond", "Times New Roman", serif;
+
+  --font-serif: var(--display-zh);
+  --font-sans: var(--sans);
+  --font-en: var(--display-latin);
+  --font-mono: var(--mono);
+
+  --cinnabar: var(--accent);
+  --cinnabar-hover: var(--accent-2);
+  --stone: var(--ink);
+  --panel: var(--ink-3);
+  --line: var(--rule-bold);
+  --muted: var(--paper-mute);
+  --night: var(--ink-2);
+  --night-panel: var(--ink-3);
+  --night-line: var(--hairline-strong);
+  --porcelain: var(--paper);
+  --copper: #c4a8e8;
+  --protocol: var(--accent);
+  --signal: var(--accent-2);
+  --warn: #c4a06a;
+  --danger: #c45c72;
+  --ok: var(--green);
+
+  --fs-display: clamp(2.75rem, 8vw, 6.5rem);
+  --lh-display: 0.98;
+  --fs-h1: clamp(2rem, 4vw, 2.75rem);
+  --fs-h2: 1.5rem;
+  --fs-h3: 1.125rem;
+  --fs-body: 15px;
+  --lh-body: 1.55;
+  --fs-cap: 0.8125rem;
+  --fs-data: 0.8125rem;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-7: 64px;
+  --space-8: 96px;
+
+  --radius-s: 4px;
+  --radius-m: 12px;
+  --radius-l: 16px;
+
+  --shadow-float: 0 16px 40px rgba(8, 6, 14, 0.45);
+  --header-h: 64px;
+  --tab-h: 64px;
+  --content: 1200px;
+  --content-wide: 1280px;
+
+  --ease: 180ms ease;
+  --focus: 2px solid var(--accent);
+}
+
+html[data-theme="ice"] {
+  --accent: #7c6cff;
+  --accent-2: #c4b5fd;
+  --accent-deep: #4c1d95;
+  --accent-rgb: 124 108 255;
+  --accent-2-rgb: 196 181 253;
+  --accent-glow: rgb(var(--accent-rgb) / 0.28);
+  --accent-soft: rgb(var(--accent-rgb) / 0.12);
+  --gold: #b8c4f0;
+  --cinnabar: var(--accent);
+  --cinnabar-hover: var(--accent-2);
+  --protocol: var(--accent);
+  --signal: var(--accent-2);
+}
+
+@media (min-width: 1440px) {
+  :root { --content: var(--content-wide); }
+}

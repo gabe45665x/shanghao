@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a0a0c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="description" content="新色 XINSE — 私人檔期協議。用規格對齊邀約。18+ 示範站。">
+  <meta property="og:title" content="新色 XINSE">
+  <meta property="og:description" content="對齊波長，再送邀約。">
+  <meta property="og:image" content="img/og-cover.jpg">
+  <title>新色 XINSE — 私人檔期協議</title>
+  <link rel="icon" href="img/logo-mark.jpg?v=s2">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/mobile.css">
+  <script>
+    (function () {
+      var t = "violet";
+      try { t = localStorage.getItem("xinse-theme") || "violet"; } catch (e) {}
+      if (t === "ice") document.documentElement.setAttribute("data-theme", "ice");
+      if (sessionStorage.getItem("xinse-age")) document.documentElement.classList.add("age-ok");
+    })();
+  </script>
+  <style>html.age-ok .age-gate { display: none; }</style>
+</head>
+<body data-page="index">
+  <a class="skip" href="#main">跳到主要內容</a>
+
+  <div class="age-gate" id="age-gate" role="dialog" aria-labelledby="age-title" aria-modal="true">
+    <div class="age-card">
+      <img src="img/logo-mark.jpg?v=s2" alt="新色" width="96" height="96" class="logo-mark">
+      <p class="kicker">PROTOCOL / 18+</p>
+      <h2 id="age-title">進入新<em style="color:var(--accent);font-style:normal">色</em>協議</h2>
+      <p>本站依電腦網路內容分級，限年滿 18 歲且具完整行為能力者瀏覽。未滿 18 歲請離開。</p>
+      <label class="age-check"><input id="age-confirm" type="checkbox"> 我已年滿 18 歲，並接受服務條款與隱私權政策。</label>
+      <label class="age-check"><input id="age-remember" type="checkbox" checked> 本次瀏覽不再顯示</label>
+      <div class="age-actions">
+        <button class="btn btn-solid" type="button" id="age-enter">進入新色</button>
+        <button class="btn btn-night" type="button" id="age-leave">離開</button>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <a href="index.html" class="brand-name">
+      <img src="img/logo-mark.jpg?v=s2" alt="新色" width="56" height="56">
+      <span class="brand-name-zh">新<em>色</em></span>
+      <span class="brand-name-en">XINSE · TAIWAN</span>
+    </a>
+    <nav class="nav" aria-label="主要">
+      <a href="index.html" class="active">首頁</a>
+      <a href="select.html">認證</a>
+      <a href="studio.html">工坊</a>
+      <a href="signal.html">訊號</a>
+      <a href="guide.html">指南</a>
+    </nav>
+    <div class="header-contacts">
+      <a class="header-contact-btn header-contact-line" href="login.html" data-auth-label>登入</a>
+      <a class="header-contact-btn header-contact-tg" href="select.html">名單</a>
+    </div>
+    <button type="button" class="theme-toggle" data-theme-toggle aria-label="切換色調">
+      <span class="ic ic-pink">◐</span><span class="ic ic-ice">❄</span>
+    </button>
+    <button type="button" class="nav-menu-btn" data-open-sidebar aria-label="開啟選單">☰</button>
+  </header>
+
+  <main id="main">
+    <section class="hero-carousel" aria-label="本期編輯">
+      <div class="hero-carousel__track">
+        <a class="hero-slide is-active" href="select.html">
+          <img class="hero-slide__img" src="img/hero-01.jpg?v=cover5" alt="" width="1920" height="1080">
+          <div class="hero-slide__overlay"></div>
+          <div class="hero-slide__edition"><span class="hero-slide__edition-num">壹</span><span class="hero-slide__edition-label">EDITION №01</span></div>
+          <div class="hero-slide__content">
+            <span class="hero-slide__tag">XINSE AFTER DARK · 協議登場</span>
+            <h1 class="hero-slide__title">新色<br><em>Private Protocol</em></h1>
+            <p class="hero-slide__desc">對齊波長，再送邀約。先讀規格與界線，再決定要不要把夜交給對方。</p>
+            <span class="hero-slide__cta">查看認證檔 <span class="hero-slide__cta-arrow">→</span></span>
+          </div>
+        </a>
+        <a class="hero-slide" href="select.html">
+          <img class="hero-slide__img" src="img/hero-02.jpg?v=cover5" alt="" width="1920" height="1080">
+          <div class="hero-slide__overlay"></div>
+          <div class="hero-slide__edition"><span class="hero-slide__edition-num">貳</span><span class="hero-slide__edition-label">EDITION №02</span></div>
+          <div class="hero-slide__content">
+            <span class="hero-slide__tag">TONIGHT'S DIRECTORY · 認證檔期</span>
+            <h2 class="hero-slide__title">認證檔<br><em>Select Protocol</em></h2>
+            <p class="hero-slide__desc">規格完整、經示範審核流程的主名單。完整檔案僅對協議帳號開放邀約。</p>
+            <span class="hero-slide__cta">瀏覽認證檔 <span class="hero-slide__cta-arrow">→</span></span>
+          </div>
+        </a>
+        <a class="hero-slide" href="studio.html">
+          <img class="hero-slide__img" src="img/hero-03.jpg?v=cover5" alt="" width="1920" height="1080">
+          <div class="hero-slide__overlay"></div>
+          <div class="hero-slide__edition"><span class="hero-slide__edition-num">參</span><span class="hero-slide__edition-label">EDITION №03</span></div>
+          <div class="hero-slide__content">
+            <span class="hero-slide__tag">STUDIO FLOOR · 獨立工坊</span>
+            <h2 class="hero-slide__title">工坊<br><em>Slow Rooms</em></h2>
+            <p class="hero-slide__desc">自助刊登、節奏較慢的私人工作室。不催、不繞路。</p>
+            <span class="hero-slide__cta">看全部工坊 <span class="hero-slide__cta-arrow">→</span></span>
+          </div>
+        </a>
+        <a class="hero-slide" href="signal.html">
+          <img class="hero-slide__img" src="img/hero-04.jpg?v=cover5" alt="" width="1920" height="1080">
+          <div class="hero-slide__overlay"></div>
+          <div class="hero-slide__edition"><span class="hero-slide__edition-num">肆</span><span class="hero-slide__edition-label">EDITION №04</span></div>
+          <div class="hero-slide__content">
+            <span class="hero-slide__tag">NEW SIGNAL · 限時訊號</span>
+            <h2 class="hero-slide__title">訊號<br><em>Limited Window</em></h2>
+            <p class="hero-slide__desc">短期、巡迴、週末。過期不保證續檔。</p>
+            <span class="hero-slide__cta">本期訊號 <span class="hero-slide__cta-arrow">→</span></span>
+          </div>
+        </a>
+        <a class="hero-slide" href="register.html">
+          <img class="hero-slide__img" src="img/hero-05.jpg?v=cover5" alt="" width="1920" height="1080">
+          <div class="hero-slide__overlay"></div>
+          <div class="hero-slide__edition"><span class="hero-slide__edition-num">伍</span><span class="hero-slide__edition-label">EDITION №05</span></div>
+          <div class="hero-slide__content">
+            <span class="hero-slide__tag">MEMBER PROTOCOL · 協議帳號</span>
+            <h2 class="hero-slide__title">入會<br><em>Join the Protocol</em></h2>
+            <p class="hero-slide__desc">邀約綁在協議帳號。示範登入只存在這個瀏覽器。</p>
+            <span class="hero-slide__cta">建立帳號 <span class="hero-slide__cta-arrow">→</span></span>
+          </div>
+        </a>
+      </div>
+      <div class="hero-live" aria-live="polite">
+        <span class="hero-live-dot"></span>
+        <span class="hero-live-text" id="live-feed"><strong>台北</strong> ・ 林予安 ・ 可送出邀約</span>
+      </div>
+      <div class="hero-nav">
+        <button type="button" data-hero-prev aria-label="上一則">‹</button>
+        <button type="button" data-hero-next aria-label="下一則">›</button>
+      </div>
+      <div class="hero-dots" role="tablist" aria-label="輪播指示"></div>
+    </section>
+
+    <section class="section">
+      <div class="wrap home-discovery">
+        <div class="today-online daily-shot">
+          <div class="today-online__head">
+            <div>
+              <span class="today-online__eyebrow">Daily Shot</span>
+              <h3>今日檔期 · 靜照</h3>
+            </div>
+            <div class="today-online__actions">
+              <a href="select.html">更多 →</a>
+              <div class="rail-nav">
+                <button type="button" class="rail-nav__btn" data-rail-prev="shotRail" aria-label="往左">‹</button>
+                <button type="button" class="rail-nav__btn" data-rail-next="shotRail" aria-label="往右">›</button>
+              </div>
+            </div>
+          </div>
+          <div class="daily-shot__rail" id="shotRail" aria-label="今日檔期靜照">
+            <a class="shot-card" href="profile.html?id=s01"><img src="img/portrait-s01.jpg?v=cover2" alt="林予安"><span>林予安 · 台北</span></a>
+            <a class="shot-card" href="profile.html?id=s02"><img src="img/portrait-s02.jpg?v=cover2" alt="高森葵"><span>高森葵 · 台中</span></a>
+            <a class="shot-card" href="profile.html?id=t01"><img src="img/portrait-t01.jpg?v=cover2" alt="周寧"><span>周寧 · 工坊</span></a>
+            <a class="shot-card" href="profile.html?id=f01"><img src="img/portrait-f01.jpg?v=cover2" alt="艾拉"><span>艾拉 · 訊號</span></a>
+            <a class="shot-card" href="profile.html?id=t02"><img src="img/portrait-t02.jpg?v=cover2" alt="許沐"><span>許沐 · 新竹</span></a>
+            <a class="shot-card" href="profile.html?id=f02"><img src="img/portrait-f02.jpg?v=cover2" alt="薇拉"><span>薇拉 · 巡迴</span></a>
+            <a class="shot-card" href="profile.html?id=s03"><img src="img/portrait-s03.jpg?v=cover2" alt="黎澄"><span>黎澄 · 高雄</span></a>
+            <a class="shot-card" href="profile.html?id=t03"><img src="img/portrait-t03.jpg?v=cover2" alt="南君"><span>南君 · 台南</span></a>
+            <a class="shot-card" href="profile.html?id=f03"><img src="img/portrait-f03.jpg?v=cover2" alt="夏禾"><span>夏禾 · 週末</span></a>
+          </div>
+        </div>
+
+        <div class="area-shortcuts" aria-label="城市快捷">
+          <button type="button" class="city-chip active" data-city="all" aria-pressed="true">全部</button>
+          <button type="button" class="city-chip" data-city="tpe">台北</button>
+          <button type="button" class="city-chip" data-city="txg">台中</button>
+          <button type="button" class="city-chip" data-city="hsz">新竹</button>
+          <button type="button" class="city-chip" data-city="tao">桃園</button>
+          <button type="button" class="city-chip" data-city="nwt">新北</button>
+          <button type="button" class="city-chip" data-city="khh">高雄</button>
+          <button type="button" class="city-chip" data-city="tnn">台南</button>
+          <button type="button" class="city-chip" data-city="cyi">嘉義</button>
+          <button type="button" class="city-chip" data-city="ila">宜蘭</button>
+          <button type="button" class="city-chip" data-city="hua">花蓮</button>
+        </div>
+      </div>
+
+      <div class="wrap grid-home" id="featuredGrid">
+        <a class="card wave-select" href="profile.html?id=s01" data-city="tpe">
+          <div class="card-media"><img src="img/portrait-s01.jpg?v=cover2" alt="林予安（虛構）" width="720" height="960"></div>
+          <div class="card-body">
+            <span class="card-id">XS-S01 · 認證</span>
+            <span class="card-name">林予安</span>
+            <span class="card-meta">台北 · 28 · 飯店禮賓</span>
+          </div>
+        </a>
+        <a class="card wave-select" href="profile.html?id=s02" data-city="txg">
+          <div class="card-media"><img src="img/portrait-s02.jpg?v=cover2" alt="高森葵（虛構）" width="720" height="960"></div>
+          <div class="card-body">
+            <span class="card-id">XS-S02 · 認證</span>
+            <span class="card-name">高森葵</span>
+            <span class="card-meta">台中 · 26 · 定點</span>
+          </div>
+        </a>
+        <a class="card wave-studio" href="profile.html?id=t01" data-city="tpe">
+          <div class="card-media"><img src="img/portrait-t01.jpg?v=cover2" alt="周寧（虛構）" width="720" height="960"></div>
+          <div class="card-body">
+            <span class="card-id">XS-T01 · 工坊</span>
+            <span class="card-name">周寧</span>
+            <span class="card-meta">台北 · 29 · 慢節奏</span>
+          </div>
+        </a>
+        <a class="card wave-signal" href="profile.html?id=f01" data-city="tao">
+          <div class="card-media"><img src="img/portrait-f01.jpg?v=cover2" alt="艾拉（虛構）" width="720" height="960"></div>
+          <div class="card-body">
+            <span class="card-id">XS-F01 · 訊號</span>
+            <span class="card-name">艾拉</span>
+            <span class="card-meta">桃園 · 短期檔</span>
+          </div>
+        </a>
+        <a class="card wave-studio" href="profile.html?id=t02" data-city="hsz">
+          <div class="card-media"><img src="img/portrait-t02.jpg?v=cover2" alt="許沐（虛構）" width="720" height="960"></div>
+          <div class="card-body">
+            <span class="card-id">XS-T02 · 工坊</span>
+            <span class="card-name">許沐</span>
+            <span class="card-meta">新竹 · 對話感</span>
+          </div>
+        </a>
+        <a class="card wave-signal" href="profile.html?id=f02" data-city="nwt">
+          <div class="card-media"><img src="img/portrait-f02.jpg?v=cover2" alt="薇拉（虛構）" width="720" height="960"></div>
+          <div class="card-body">
+            <span class="card-id">XS-F02 · 訊號</span>
+            <span class="card-name">薇拉</span>
+            <span class="card-meta">新北 · 北北基巡迴</span>
+          </div>
+        </a>
+        <a class="card wave-select" href="profile.html?id=s03" data-city="khh">
+          <div class="card-media"><img src="img/portrait-s03.jpg?v=cover2" alt="黎澄（虛構）" width="720" height="960"></div>
+          <div class="card-body">
+            <span class="card-id">XS-S03 · 認證</span>
+            <span class="card-name">黎澄</span>
+            <span class="card-meta">高雄 · 此時段未開放</span>
+          </div>
+        </a>
+        <a class="card wave-studio" href="profile.html?id=t03" data-city="tnn">
+          <div class="card-media"><img src="img/portrait-t03.jpg?v=cover2" alt="南君（虛構）" width="720" height="960"></div>
+          <div class="card-body">
+            <span class="card-id">XS-T03 · 工坊</span>
+            <span class="card-name">南君</span>
+            <span class="card-meta">台南 · 準時結束</span>
+          </div>
+        </a>
+        <a class="card wave-signal" href="profile.html?id=f03" data-city="tnn">
+          <div class="card-media"><img src="img/portrait-f03.jpg?v=cover2" alt="夏禾（虛構）" width="720" height="960"></div>
+          <div class="card-body">
+            <span class="card-id">XS-F03 · 訊號</span>
+            <span class="card-name">夏禾</span>
+            <span class="card-meta">台南 · 週末限定</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="wrap">
+        <p class="empty-state" data-empty-city hidden>此城市暫無示範檔。可切回全部，或稍後再看。</p>
+        <a class="section-cta-wide" href="select.html">
+          <span>查看全部 <strong>9</strong> 份示範檔</span>
+          <span>→</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="banner">
+      <div class="banner-text">
+        <div class="banner-eyebrow">● 先對齊規格 · 再送邀約 · 未開放會明白告訴你</div>
+        <h2 class="banner-title">對齊波長<br><em>再決定把夜交給誰</em></h2>
+        <div class="banner-proof">
+          <div class="banner-proof-item">
+            <strong>先讀檔</strong>
+            <span>肖像、場景、一句主張</span>
+          </div>
+          <div class="banner-proof-item">
+            <strong>核對界線</strong>
+            <span>可協商與不接受寫在同一張表</span>
+          </div>
+          <div class="banner-proof-item">
+            <strong>再邀約</strong>
+            <span>未登入會先建立協議帳號</span>
+          </div>
+        </div>
+        <p class="banner-sub">新色是設計示範站。九份檔期、回報皆虛構。方案統一為 1s2500/30min、2s3500/60min。</p>
+        <div class="banner-cta-row">
+          <a href="select.html" class="banner-cta">瀏覽認證檔 →</a>
+          <a href="guide.html" class="banner-cta-line">使用方式</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="footer-adult-bar"><b>18+</b>本站僅限 18 歲以上瀏覽 · 包含成人資訊 · 本站為設計示範，名單皆虛構</div>
+
+  <footer class="footer footer--v04">
+    <a href="index.html" class="fv04-vert" aria-label="新色">
+      <img src="img/logo-mark.jpg?v=s2" alt="" width="64" height="64">
+      <span class="fv04-mark">新<em>色</em></span>
+    </a>
+    <div class="fv04-rule" aria-hidden="true"></div>
+    <div class="fv04-info">
+      <div class="fv04-en">XINSE · TAIWAN · PRIVATE PROTOCOL</div>
+      <div class="fv04-trust">
+        <span>審核上架</span><span>協議帳號</span><span>可回報</span><span>18+ 分級</span>
+      </div>
+      <div class="fv04-links">
+        <div class="fv04-row">
+          <span class="fv04-kicker">Legal</span>
+          <a href="terms.html">服務條款</a>
+          <a href="privacy.html">隱私權</a>
+          <a href="safety.html">安全準則</a>
+        </div>
+        <div class="fv04-row">
+          <span class="fv04-kicker">Guide</span>
+          <a href="guide.html">使用方式</a>
+          <a href="faq.html">FAQ</a>
+          <a href="about.html">關於新色</a>
+          <a href="publish.html">刊登檔期</a>
+        </div>
+        <div class="fv04-row">
+          <span class="fv04-kicker">List</span>
+          <a href="select.html">認證檔期</a>
+          <a href="studio.html">獨立工坊</a>
+          <a href="signal.html">限時訊號</a>
+        </div>
+      </div>
+      <div class="fv04-copy">© 2026 新色 XINSE · 示範站，不含真實交易</div>
+    </div>
+  </footer>
+
+  <nav class="tabbar" aria-label="行動主選單">
+    <a href="index.html" aria-current="page">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 11 12 4l8 7v9H4z"/></svg>
+      首頁
+    </a>
+    <a href="select.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="4" width="14" height="16" rx="1"/><path d="M8 9h8M8 13h5"/></svg>
+      認證
+    </a>
+    <a href="studio.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20V8l8-4 8 4v12"/><path d="M9 20v-6h6v6"/></svg>
+      工坊
+    </a>
+    <a href="signal.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 14c4-6 12-6 16 0"/><path d="M7 17c3-4 7-4 10 0"/><circle cx="12" cy="20" r="1"/></svg>
+      訊號
+    </a>
+    <a href="account.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3"/><path d="M5 19c1.5-3 4-5 7-5s5.5 2 7 5"/></svg>
+      我的
+    </a>
+  </nav>
+
+  <button class="concierge" type="button" id="concierge">開啟禮賓</button>
+
+  <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+  <aside class="drawer" id="account-drawer" hidden aria-label="建立協議帳號">
+    <p class="kicker">ACCOUNT</p>
+    <h2 style="margin:8px 0 8px">建立協議帳號</h2>
+    <p class="form-help" style="margin-bottom:16px">設定一次，之後可直接邀約。示範帳號只存在此瀏覽器。</p>
+    <form id="drawer-form">
+      <div class="form-field"><label for="drawer-user">使用者名稱</label><input id="drawer-user" autocomplete="username" required></div>
+      <div class="form-field"><label for="drawer-pass">密碼</label><input id="drawer-pass" type="password" autocomplete="new-password" required></div>
+      <div class="form-field"><label for="drawer-pass2">確認密碼</label><input id="drawer-pass2" type="password" autocomplete="new-password" required></div>
+      <button class="btn btn-solid btn-full" type="submit">確認並繼續</button>
+      <button class="btn btn-ghost btn-full" type="button" id="drawer-close" style="margin-top:8px">關閉</button>
+    </form>
+  </aside>
+
+  <aside class="sidebar" id="sidebar" hidden>
+    <p class="kicker">XINSE · MENU</p>
+    <img src="img/logo-mark.jpg?v=s2" alt="" width="56" height="56" class="logo-mark" style="margin:8px 0 12px;width:56px;height:56px;grid-column:auto;grid-row:auto">
+    <h2 style="margin:8px 0 16px">新<em style="color:var(--accent);font-style:normal">色</em></h2>
+    <nav class="side-nav" style="flex-direction:column">
+      <a href="index.html" aria-current="page">首頁</a>
+      <a href="select.html">認證檔期</a>
+      <a href="studio.html">獨立工坊</a>
+      <a href="signal.html">限時訊號</a>
+      <a href="guide.html">使用方式</a>
+      <a href="safety.html">安全準則</a>
+      <a href="login.html" data-auth-label>登入</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+    <button class="btn btn-ghost btn-full" type="button" data-close-sidebar style="margin-top:24px">關閉</button>
+  </aside>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

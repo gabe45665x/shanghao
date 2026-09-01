@@ -1,0 +1,20 @@
+{
+  "name": "新色 XINSE",
+  "short_name": "新色",
+  "description": "私人檔期協議。18+ 設計示範站。",
+  "start_url": "index.html",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a0a0c",
+  "theme_color": "#9d4edd",
+  "lang": "zh-Hant",
+  "icons": [
+    {
+      "src": "img/logo-mark.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,0 +1,313 @@
+/* 新色 XINSE — 手機／窄螢幕版面
+   桌面維持雜誌編排；<1024px 改成 App 殼：緊湊頂欄、直式封面、底部分頁。 */
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  padding-bottom: calc(var(--tab-h) + env(safe-area-inset-bottom));
+}
+
+@media (min-width: 1024px) {
+  body { padding-bottom: 0; }
+}
+
+button, a, input, select, textarea {
+  -webkit-tap-highlight-color: rgb(var(--accent-rgb) / 0.22);
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --header-h: 56px;
+    --fs-body: 15px;
+  }
+
+  .header,
+  .site-header {
+    min-height: calc(var(--header-h) + env(safe-area-inset-top));
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .header,
+  .header-inner,
+  .site-header .header-inner {
+    padding: 8px 12px;
+    gap: 8px;
+  }
+
+  .brand,
+  .brand-name {
+    grid-template-columns: 36px auto;
+    column-gap: 8px;
+  }
+
+  .brand img,
+  .brand-name img,
+  .logo-mark {
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
+  }
+
+  .brand-word,
+  .brand-name-zh {
+    font-size: 20px;
+    letter-spacing: 0.08em;
+  }
+
+  .brand-en,
+  .brand-name-en { display: none; }
+
+  .header-contacts { display: none; }
+
+  .header-actions .btn-solid,
+  .header-actions .btn-ghost { display: none; }
+
+  .theme-toggle,
+  .nav-toggle,
+  .nav-menu-btn {
+    width: 40px;
+    height: 40px;
+    min-height: 40px;
+  }
+
+  .wrap { width: min(calc(100% - 24px), var(--content)); }
+
+  .section { padding: 28px 0; }
+
+  .page-head { padding: 24px 0 8px; gap: 8px; }
+  .page-head h1 { font-size: 1.75rem; }
+
+  /* Hero：手機改直式封面，文字壓在下緣 */
+  .hero-slide,
+  .hero-slide:first-child {
+    height: min(78svh, 680px);
+    aspect-ratio: auto;
+    min-height: 420px;
+  }
+
+  .hero-slide__img { object-position: center 18%; }
+
+  .hero-slide__overlay {
+    background:
+      linear-gradient(to top, rgba(10, 8, 16, 0.92) 0%, rgba(10, 8, 16, 0.45) 42%, rgba(10, 8, 16, 0.18) 100%);
+  }
+
+  .hero-slide__edition { top: 14px; left: 14px; }
+
+  .hero-slide__content {
+    padding: 20px 16px calc(28px + 18px);
+    max-width: none;
+    justify-content: flex-end;
+  }
+
+  .hero-slide__title {
+    font-size: clamp(34px, 11vw, 52px);
+    line-height: 1.02;
+  }
+
+  .hero-slide__desc {
+    font-size: 14px;
+    margin-top: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .hero-slide__cta {
+    width: 100%;
+    justify-content: center;
+    margin-top: 16px;
+    min-height: 44px;
+  }
+
+  .hero-nav { display: none; }
+
+  .hero-dots { bottom: 10px; }
+
+  .hero-live { display: none; }
+
+  /* 今日靜照：一次露出約兩張半 */
+  .today-online__head,
+  .daily-shot__head {
+    align-items: center;
+  }
+
+  .today-online__head h3 { font-size: 1.15rem; }
+
+  .rail-nav { display: none; }
+
+  .shot-card { flex: 0 0 42vw; }
+
+  .area-shortcuts,
+  .city-rail {
+    margin-inline: -12px;
+    padding: 8px 12px;
+    gap: 6px;
+  }
+
+  .city-chip,
+  .area-shortcuts button {
+    padding: 10px 14px;
+    font-size: 12px;
+    min-height: 40px;
+  }
+
+  /* 卡片網格：兩欄，比較像手機 App */
+  .grid-home,
+  .card-grid,
+  .card-grid.cols-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .card-body { padding: 10px 10px 14px 12px; gap: 4px; }
+  .card-id { font-size: 10px; }
+  .card-name { font-size: 1.02rem; }
+  .card-meta { font-size: 12px; }
+
+  .section-cta-wide {
+    border-radius: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 16px 18px;
+    margin-top: 20px;
+  }
+
+  .banner { padding: 40px 16px 48px; }
+  .banner-title { font-size: clamp(28px, 9vw, 40px); }
+  .banner-proof { gap: 10px; margin: 20px 0 12px; }
+  .banner-cta { width: 100%; justify-content: center; min-height: 44px; }
+  .banner-cta-row { width: 100%; }
+  .banner-cta-line { padding: 8px 0; }
+
+  .footer-adult-bar {
+    padding: 12px 16px 12px;
+    font-size: 12px;
+    align-items: flex-start;
+  }
+
+  .footer--v04 {
+    grid-template-columns: 1fr;
+    padding: 28px 16px 24px;
+    gap: 16px;
+  }
+
+  .fv04-vert {
+    flex-direction: row;
+    font-size: 28px;
+    letter-spacing: 0.12em;
+  }
+
+  .fv04-vert img { width: 48px; height: 48px; }
+  .fv04-mark { writing-mode: horizontal-tb; }
+  .fv04-rule { display: none; }
+
+  .site-footer { padding: 32px 0 24px; }
+
+  .spec-card { grid-template-columns: 1fr; }
+  .spec-card .card-media { max-height: 360px; }
+
+  .auth-shell { padding: 24px 16px 40px; }
+  .auth-card { padding: 24px 18px; width: 100%; }
+
+  .age-gate { padding: 16px; align-items: end; }
+  .age-card {
+    width: 100%;
+    padding: 24px 18px calc(18px + env(safe-area-inset-bottom));
+    border-radius: 20px 20px 12px 12px;
+  }
+  .age-card img.logo-mark { width: 72px; height: 72px; }
+  .age-actions .btn { min-height: 48px; width: 100%; }
+
+  .drawer,
+  .sidebar {
+    width: 100%;
+    padding: 24px 18px calc(24px + env(safe-area-inset-bottom));
+  }
+
+  .concierge {
+    right: 12px;
+    bottom: calc(var(--tab-h) + 12px + env(safe-area-inset-bottom));
+    min-height: 44px;
+    padding: 0 14px;
+    font-size: 13px;
+  }
+
+  .toast {
+    bottom: calc(var(--tab-h) + 16px + env(safe-area-inset-bottom));
+  }
+
+  .doc-layout {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 24px 0 16px;
+  }
+
+  .doc-toc {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .doc-toc::-webkit-scrollbar { display: none; }
+  .doc-toc a {
+    flex: 0 0 auto;
+    padding: 8px 12px;
+    border: 1px solid var(--hairline-strong);
+    border-radius: 999px;
+    white-space: nowrap;
+    font-size: 12px;
+  }
+
+  .trust-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .flow-item { grid-template-columns: 72px 1fr; }
+  .flow-item img { width: 72px; height: 72px; }
+
+  .account-layout { grid-template-columns: 1fr; }
+  .side-nav { overflow-x: auto; }
+
+  .profile-hero { gap: 16px; }
+  .hero-ctas { width: 100%; }
+  .hero-ctas .btn { flex: 1; }
+
+  input, select, textarea { font-size: 16px; }
+
+  .form-field input,
+  .form-field select,
+  .form-field textarea { min-height: 48px; }
+
+  .tabbar a { font-size: 10px; gap: 3px; }
+  .tabbar svg { width: 22px; height: 22px; }
+}
+
+@media (max-width: 379px) {
+  .grid-home,
+  .card-grid,
+  .card-grid.cols-3 { gap: 8px; }
+  .card-name { font-size: 0.95rem; }
+  .shot-card { flex: 0 0 46vw; }
+  .brand-word, .brand-name-zh { font-size: 18px; }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .shot-card { flex: 0 0 34vw; }
+}
+
+/* 橫放手機：封面不要吃掉整屏 */
+@media (max-width: 1023px) and (orientation: landscape) {
+  .hero-slide,
+  .hero-slide:first-child {
+    height: min(100svh, 420px);
+    min-height: 280px;
+  }
+  .hero-slide__title { font-size: clamp(28px, 6vw, 40px); }
+  .hero-slide__desc { -webkit-line-clamp: 2; }
+}

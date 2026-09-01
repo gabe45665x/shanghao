@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a0a0c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="manifest" href="site.webmanifest">
+  <title>限時訊號 · 新色 XINSE</title>
+  <link rel="icon" href="img/logo-mark.jpg?v=s2">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><img src="img/logo-mark.jpg?v=s2" alt=""><span class="brand-word">新色</span><span class="brand-en">XINSE</span></a>
+      <nav class="nav-desk">
+        <a href="select.html">認證檔期</a>
+        <a href="studio.html">獨立工坊</a>
+        <a href="signal.html" aria-current="page">限時訊號</a>
+        <a href="guide.html">使用方式</a>
+        <a href="safety.html">安全準則</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="login.html" data-auth-label>登入</a>
+        <a class="btn btn-solid" href="publish.html">刊登檔期</a>
+        <button class="nav-toggle" type="button" aria-label="開啟選單"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <nav class="nav-mobile" id="nav-mobile">
+    <a href="select.html">認證檔期</a><a href="studio.html">獨立工坊</a><a href="signal.html">限時訊號</a>
+  </nav>
+  <main class="section-night" style="min-height:70vh">
+    <div class="wrap page-head">
+      <p class="kicker">SIGNAL</p>
+      <h1>限時訊號<em>Limited Window</em></h1>
+      <p class="lede">短期、巡迴、週末限定。過期不保證續檔。</p>
+      <div class="city-rail">
+        <button class="city-chip" type="button" data-city="all" aria-pressed="true">ALL 全區</button>
+        <button class="city-chip" type="button" data-city="tpe">TPE 台北</button>
+        <button class="city-chip" type="button" data-city="txg">TXG 台中</button>
+        <button class="city-chip" type="button" data-city="hsz">HSZ 新竹</button>
+        <button class="city-chip" type="button" data-city="tao">TAO 桃園</button>
+        <button class="city-chip" type="button" data-city="nwt">NWT 新北</button>
+        <button class="city-chip" type="button" data-city="khh">KHH 高雄</button>
+        <button class="city-chip" type="button" data-city="tnn">TNN 台南</button>
+        <button class="city-chip" type="button" data-city="cyi">CYI 嘉義</button>
+        <button class="city-chip" type="button" data-city="yun">YUN 雲林</button>
+        <button class="city-chip" type="button" data-city="ila">ILA 宜蘭</button>
+        <button class="city-chip" type="button" data-city="mia">MIA 苗栗</button>
+        <button class="city-chip" type="button" data-city="chw">CHW 彰化</button>
+        <button class="city-chip" type="button" data-city="nan">NAN 南投</button>
+        <button class="city-chip" type="button" data-city="kel">KEL 基隆</button>
+        <button class="city-chip" type="button" data-city="hua">HUA 花蓮</button>
+        <button class="city-chip" type="button" data-city="ttt">TTT 台東</button>
+        <button class="city-chip" type="button" data-city="pen">PEN 澎湖</button>
+        <button class="city-chip" type="button" data-city="pif">PIF 屏東</button>
+        <button class="city-chip" type="button" data-city="kin">KIN 金門</button>
+      </div>
+    </div>
+    <div class="wrap" style="padding-bottom:64px">
+      <div class="card-grid cols-3">
+        <a class="card wave-signal" href="profile.html?id=f01" data-city="tao">
+          <div class="card-media"><img src="img/portrait-f01.jpg?v=cover2" alt="艾拉"></div>
+          <div class="card-body"><span class="card-id">XS-F01</span><span class="card-name">艾拉</span><span class="card-meta">桃園 · 本週短期檔</span></div>
+        </a>
+        <a class="card wave-signal" href="profile.html?id=f02" data-city="nwt">
+          <div class="card-media"><img src="img/portrait-f02.jpg?v=cover2" alt="薇拉"></div>
+          <div class="card-body"><span class="card-id">XS-F02</span><span class="card-name">薇拉</span><span class="card-meta">新北 · 北北基巡迴</span></div>
+        </a>
+        <a class="card wave-signal" href="profile.html?id=f03" data-city="tnn">
+          <div class="card-media"><img src="img/portrait-f03.jpg?v=cover2" alt="夏禾"></div>
+          <div class="card-body"><span class="card-id">XS-F03</span><span class="card-name">夏禾</span><span class="card-meta">台南 · 週末限定</span></div>
+        </a>
+      </div>
+      <p class="empty-state" data-empty-city hidden>此城市暫無線示範檔。</p>
+      <nav class="pager" aria-label="分頁"><span aria-current="page">1</span></nav>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="wrap"><p class="legal-note">18+ ‧ <a href="index.html">新色</a></p></div></footer>
+  <nav class="tabbar"><a href="index.html">首頁</a><a href="select.html">認證</a><a href="studio.html">工坊</a><a href="signal.html" aria-current="page">訊號</a><a href="account.html">我的</a></nav>
+  <button class="concierge" id="concierge" type="button">開啟禮賓</button>
+  <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+  <aside class="drawer" id="account-drawer" hidden>
+    <form id="drawer-form">
+      <div class="form-field"><label for="drawer-user">使用者名稱</label><input id="drawer-user" required></div>
+      <div class="form-field"><label for="drawer-pass">密碼</label><input id="drawer-pass" type="password" required></div>
+      <div class="form-field"><label for="drawer-pass2">確認密碼</label><input id="drawer-pass2" type="password" required></div>
+      <button class="btn btn-solid btn-full" type="submit">確認並繼續</button>
+      <button class="btn btn-ghost btn-full" type="button" id="drawer-close" style="margin-top:8px">關閉</button>
+    </form>
+  </aside>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

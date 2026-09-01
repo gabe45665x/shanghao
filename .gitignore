@@ -1,0 +1,6 @@
+_source/
+*.zip
+.DS_Store
+Thumbs.db
+desktop.ini
+node_modules/
