@@ -531,7 +531,7 @@ html[data-theme="light"] .theme-toggle .ic-moon { display: inline-block; }
   backdrop-filter: blur(16px);
   border-top: 1px solid var(--hairline-strong);
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   z-index: 35;
 }
 .tabbar a {
@@ -568,6 +568,20 @@ html[data-theme="light"] .theme-toggle .ic-moon { display: inline-block; }
 }
 @media (min-width: 1024px) {
   .concierge { bottom: 24px; }
+}
+
+/* 目前不開放登入／註冊／會員系統 */
+[data-auth-label],
+a[href="login.html"],
+a[href="register.html"],
+a[href="recover.html"],
+a[href="account.html"],
+a[href="publish.html"],
+a[href^="login.html?"],
+.concierge,
+#account-drawer,
+#drawer-backdrop {
+  display: none !important;
 }
 
 .age-gate {

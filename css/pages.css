@@ -37,6 +37,9 @@ video.hero-slide__img {
   object-fit: cover;
   background: var(--ink);
 }
+.hero-slide__cover {
+  object-position: center 32%;
+}
 .hero-slide__overlay {
   position: absolute;
   inset: 0;

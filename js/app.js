@@ -3,6 +3,13 @@
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 
+  const AUTH_OFF = true;
+  const thisFile = (location.pathname.split("/").pop() || "").toLowerCase();
+  if (AUTH_OFF && /^(login|register|recover|account|publish)\.html$/.test(thisFile)) {
+    location.replace("index.html");
+    return;
+  }
+
   const toast = (msg) => {
     let el = $(".toast");
     if (!el) {
@@ -46,11 +53,6 @@
       "select.html": "select",
       "studio.html": "studio",
       "signal.html": "signal",
-      "account.html": "account",
-      "login.html": "account",
-      "register.html": "account",
-      "recover.html": "account",
-      "publish.html": "account",
       "profile.html": "home"
     };
     const current = tabOf[file] || "";
@@ -58,16 +60,14 @@
       home: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 11 12 4l8 7v9H4z"/></svg>',
       select: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="4" width="14" height="16" rx="1"/><path d="M8 9h8M8 13h5"/></svg>',
       studio: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20V8l8-4 8 4v12"/><path d="M9 20v-6h6v6"/></svg>',
-      signal: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 14c4-6 12-6 16 0"/><path d="M7 17c3-4 7-4 10 0"/><circle cx="12" cy="20" r="1"/></svg>',
-      account: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3"/><path d="M5 19c1.5-3 4-5 7-5s5.5 2 7 5"/></svg>'
+      signal: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 14c4-6 12-6 16 0"/><path d="M7 17c3-4 7-4 10 0"/><circle cx="12" cy="20" r="1"/></svg>'
     };
     const item = (id, href, label) =>
       `<a href="${href}"${current === id ? ' aria-current="page"' : ""}>${icon[id]}${label}</a>`;
     const html = item("home", "index.html", "首頁")
       + item("select", "select.html", "認證")
       + item("studio", "studio.html", "工坊")
-      + item("signal", "signal.html", "訊號")
-      + item("account", "account.html", "我的");
+      + item("signal", "signal.html", "訊號");
     let tab = $(".tabbar");
     if (!tab) {
       tab = document.createElement("nav");
@@ -152,7 +152,6 @@
         <a href="signal.html">限時訊號</a>
         <a href="guide.html">使用方式</a>
         <a href="safety.html">安全準則</a>
-        <a href="login.html" data-auth-label>登入</a>
       </nav>
       <button class="btn btn-ghost btn-full" type="button" data-close-sidebar style="margin-top:24px">關閉</button>`;
     document.body.appendChild(side);
@@ -453,7 +452,7 @@
   const cityParam = new URLSearchParams(location.search).get("city");
   if (cityParam) applyCity(cityParam);
 
-  /* Auth demo */
+  /* Auth demo — currently hidden */
   const isIn = () => sessionStorage.getItem("xinse-user");
   $$("[data-auth-label]").forEach((a) => {
     if (isIn()) {
@@ -503,7 +502,7 @@
   /* Invite */
   const openInvite = (profileId) => {
     const data = window.XINSE_DATA?.profiles.find((p) => p.id === profileId);
-    if (!isIn()) {
+    if (!AUTH_OFF && !isIn()) {
       const next = encodeURIComponent(`profile.html?id=${profileId}`);
       location.href = `login.html?next=${next}`;
       return;
