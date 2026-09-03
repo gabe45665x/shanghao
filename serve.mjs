@@ -22,7 +22,9 @@ const TYPES = {
   ".webp": "image/webp",
   ".ico": "image/x-icon",
   ".txt": "text/plain; charset=utf-8",
-  ".md": "text/markdown; charset=utf-8"
+  ".md": "text/markdown; charset=utf-8",
+  ".mp4": "video/mp4",
+  ".webm": "video/webm"
 };
 
 function isBlocked(rel) {
@@ -68,7 +70,7 @@ server.listen(PORT, HOST, () => {
       if (a.family === "IPv4" && !a.internal) lan.push(a.address);
     }
   }
-  console.log(`XINSE 本機  http://127.0.0.1:${PORT}/`);
-  lan.forEach((ip) => console.log(`XINSE 區網  http://${ip}:${PORT}/`));
+  console.log(`尚豪 本機  http://127.0.0.1:${PORT}/`);
+  lan.forEach((ip) => console.log(`尚豪 區網  http://${ip}:${PORT}/`));
   console.log("對手機／公共網路：請再跑 公開預覽.bat 或看 README 的 GitHub Pages 連結。");
 });

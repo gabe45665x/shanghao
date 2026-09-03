@@ -3,22 +3,30 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#0a0a0c">
+  <meta name="theme-color" content="#070605">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="manifest" href="site.webmanifest">
-  <title>認證檔期 · 新色 XINSE</title>
+  <title>認證檔期 · 尚豪</title>
   <link rel="icon" href="img/logo-mark.jpg?v=s2">
-  <link rel="stylesheet" href="css/tokens.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/pages.css">
-  <link rel="stylesheet" href="css/mobile.css">
+  <link rel="stylesheet" href="css/tokens.css?v=gold4">
+  <link rel="stylesheet" href="css/base.css?v=gold4">
+  <link rel="stylesheet" href="css/components.css?v=gold4">
+  <link rel="stylesheet" href="css/pages.css?v=gold4">
+  <link rel="stylesheet" href="css/mobile.css?v=gold4">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("xinse-theme") || "dark";
+        if (t === "light" || t === "ice") document.documentElement.setAttribute("data-theme", "light");
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
   <a class="skip" href="#main">跳到主要內容</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="index.html"><img src="img/logo-mark.jpg?v=s2" alt="" width="32" height="32"><span class="brand-word">新色</span><span class="brand-en">XINSE</span></a>
+      <a class="brand" href="index.html"><img src="img/logo-mark.jpg?v=s2" alt="" width="32" height="32"><span class="brand-word">尚豪</span><span class="brand-en">TAIWAN</span></a>
       <nav class="nav-desk" aria-label="主要">
         <a href="select.html" aria-current="page">認證檔期</a>
         <a href="studio.html">獨立工坊</a>
@@ -41,76 +49,11 @@
     <div class="wrap page-head">
       <p class="kicker">SELECT</p>
       <h1>認證檔期<em>名冊</em></h1>
-      <p class="lede">規格完整、經示範審核流程的主名單。目前 3 筆虛構檔。</p>
-      <div class="city-rail">
-        <button class="city-chip" type="button" data-city="all" aria-pressed="true">ALL 全區</button>
-        <button class="city-chip" type="button" data-city="tpe">TPE 台北</button>
-        <button class="city-chip" type="button" data-city="txg">TXG 台中</button>
-        <button class="city-chip" type="button" data-city="hsz">HSZ 新竹</button>
-        <button class="city-chip" type="button" data-city="tao">TAO 桃園</button>
-        <button class="city-chip" type="button" data-city="nwt">NWT 新北</button>
-        <button class="city-chip" type="button" data-city="khh">KHH 高雄</button>
-        <button class="city-chip" type="button" data-city="tnn">TNN 台南</button>
-        <button class="city-chip" type="button" data-city="cyi">CYI 嘉義</button>
-        <button class="city-chip" type="button" data-city="yun">YUN 雲林</button>
-        <button class="city-chip" type="button" data-city="ila">ILA 宜蘭</button>
-        <button class="city-chip" type="button" data-city="mia">MIA 苗栗</button>
-        <button class="city-chip" type="button" data-city="chw">CHW 彰化</button>
-        <button class="city-chip" type="button" data-city="nan">NAN 南投</button>
-        <button class="city-chip" type="button" data-city="kel">KEL 基隆</button>
-        <button class="city-chip" type="button" data-city="hua">HUA 花蓮</button>
-        <button class="city-chip" type="button" data-city="ttt">TTT 台東</button>
-        <button class="city-chip" type="button" data-city="pen">PEN 澎湖</button>
-        <button class="city-chip" type="button" data-city="pif">PIF 屏東</button>
-        <button class="city-chip" type="button" data-city="kin">KIN 金門</button>
-      </div>
+      <p class="lede">規格完整的主名單。</p>
+      <div class="city-rail" aria-label="地區"></div>
     </div>
     <div class="wrap spec-stack" style="padding-bottom:64px">
-      <article class="spec-card" data-city="tpe">
-        <div class="card-media"><img src="img/portrait-s01.jpg?v=cover2" alt="林予安" width="720" height="960"></div>
-        <div class="card-body" style="padding:24px">
-          <span class="card-id">XS-S01</span>
-          <h2 class="card-name">林予安</h2>
-          <dl class="spec-dl">
-            <dt>城市</dt><dd>台北</dd>
-            <dt>年齡</dt><dd>28</dd>
-            <dt>身高</dt><dd>165 cm</dd>
-            <dt>模式</dt><dd>定點</dd>
-            <dt>方案</dt><dd>1s2500/30min  2s3500/60min</dd>
-          </dl>
-          <a class="btn btn-solid" href="profile.html?id=s01" style="margin-top:16px;width:fit-content">看檔案</a>
-        </div>
-      </article>
-      <article class="spec-card" data-city="txg">
-        <div class="card-media"><img src="img/portrait-s02.jpg?v=cover2" alt="高森葵" width="720" height="960"></div>
-        <div class="card-body" style="padding:24px">
-          <span class="card-id">XS-S02</span>
-          <h2 class="card-name">高森葵</h2>
-          <dl class="spec-dl">
-            <dt>城市</dt><dd>台中</dd>
-            <dt>年齡</dt><dd>26</dd>
-            <dt>身高</dt><dd>168 cm</dd>
-            <dt>模式</dt><dd>定點</dd>
-            <dt>方案</dt><dd>1s2500/30min  2s3500/60min</dd>
-          </dl>
-          <a class="btn btn-solid" href="profile.html?id=s02" style="margin-top:16px;width:fit-content">看檔案</a>
-        </div>
-      </article>
-      <article class="spec-card" data-city="khh">
-        <div class="card-media"><img src="img/portrait-s03.jpg?v=cover2" alt="黎澄" width="720" height="960"></div>
-        <div class="card-body" style="padding:24px">
-          <span class="card-id">XS-S03</span>
-          <h2 class="card-name">黎澄</h2>
-          <dl class="spec-dl">
-            <dt>城市</dt><dd>高雄</dd>
-            <dt>年齡</dt><dd>32</dd>
-            <dt>狀態</dt><dd>此時段未開放</dd>
-            <dt>方案</dt><dd>1s2500/30min  2s3500/60min</dd>
-          </dl>
-          <a class="btn btn-solid" href="profile.html?id=s03" style="margin-top:16px;width:fit-content">看檔案</a>
-        </div>
-      </article>
-      <p class="empty-state" data-empty-city hidden>此城市暫無認證示範檔。可切回全區，或稍後再看。</p>
+      <p class="empty-state" data-empty-city hidden>此城市暫無認證檔。可切回全區，或稍後再看。</p>
       <nav class="pager" aria-label="分頁"><span aria-current="page">1</span></nav>
     </div>
   </main>
@@ -137,7 +80,7 @@
       <button class="btn btn-ghost btn-full" type="button" id="drawer-close" style="margin-top:8px">關閉</button>
     </form>
   </aside>
-  <script src="js/data.js"></script>
-  <script src="js/app.js"></script>
+  <script src="js/data.js?v=akx6"></script>
+  <script src="js/app.js?v=akx6"></script>
 </body>
 </html>

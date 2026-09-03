@@ -1,13 +1,13 @@
 {
-  "name": "新色 XINSE",
-  "short_name": "新色",
+  "name": "尚豪",
+  "short_name": "尚豪",
   "description": "私人檔期協議。18+ 設計示範站。",
   "start_url": "index.html",
   "scope": ".",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#0a0a0c",
-  "theme_color": "#9d4edd",
+  "background_color": "#070605",
+  "theme_color": "#070605",
   "lang": "zh-Hant",
   "icons": [
     {

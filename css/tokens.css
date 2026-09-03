@@ -1,33 +1,39 @@
-/* 新色 XINSE — ecup78 結構對齊，紫色色調
-   黑底夜刊 + 紫羅蘭，不是夜店霓虹。 */
+/* 尚豪 — 狂野黑金
+   焦黑底、熔金高光、銅金邊。不是紫夜刊。 */
 
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=JetBrains+Mono:wght@500;700&family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@500;700&display=swap");
 
 :root {
-  --ink: #0a0a0c;
-  --ink-2: #120f18;
-  --ink-3: #1a1626;
-  --paper: #fdfbf8;
-  --paper-dim: rgba(253, 251, 248, 0.92);
-  --paper-mute: rgba(253, 251, 248, 0.62);
+  --ink: #070605;
+  --ink-2: #100e0b;
+  --ink-3: #1c1812;
+  --paper: #f6edd4;
+  --paper-dim: rgba(246, 237, 212, 0.92);
+  --paper-mute: rgba(246, 237, 212, 0.62);
 
-  --accent: #9d4edd;
-  --accent-2: #c77dff;
-  --accent-deep: #7b2cbf;
-  --accent-rgb: 157 78 221;
-  --accent-2-rgb: 199 125 255;
-  --accent-glow: rgb(var(--accent-rgb) / 0.28);
-  --accent-soft: rgb(var(--accent-rgb) / 0.12);
+  --accent: #c9a227;
+  --accent-2: #f0d060;
+  --accent-deep: #8a6914;
+  --accent-rgb: 201 162 39;
+  --accent-2-rgb: 240 208 96;
+  --accent-glow: rgb(var(--accent-rgb) / 0.38);
+  --accent-soft: rgb(var(--accent-rgb) / 0.14);
+  --on-accent: #140f08;
 
-  --gold: #d4b8f0;
-  --gold-2: #ead9ff;
-  --gold-glow: rgba(212, 184, 240, 0.22);
+  --gold: #e4c56a;
+  --gold-2: #f7e7a8;
+  --gold-glow: rgba(228, 197, 106, 0.28);
   --green: #34d399;
 
-  --rule: rgba(245, 239, 229, 0.1);
-  --rule-bold: rgba(245, 239, 229, 0.22);
-  --hairline: rgba(245, 239, 229, 0.06);
-  --hairline-strong: rgba(245, 239, 229, 0.12);
+  --rule: rgba(228, 197, 106, 0.16);
+  --rule-bold: rgba(240, 208, 96, 0.32);
+  --hairline: rgba(246, 237, 212, 0.07);
+  --hairline-strong: rgba(228, 197, 106, 0.18);
+  --chrome: rgba(7, 6, 5, 0.92);
+  --scrim: rgba(7, 6, 5, 0.88);
+  --chip-bg: rgba(255, 255, 255, 0.04);
+  --chip-border: rgba(245, 239, 229, 0.14);
+  --color-scheme: dark;
 
   --display: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
   --sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
@@ -52,7 +58,7 @@
   --night-panel: var(--ink-3);
   --night-line: var(--hairline-strong);
   --porcelain: var(--paper);
-  --copper: #c4a8e8;
+  --copper: #c4843a;
   --protocol: var(--accent);
   --signal: var(--accent-2);
   --warn: #c4a06a;
@@ -82,29 +88,63 @@
   --radius-m: 12px;
   --radius-l: 16px;
 
-  --shadow-float: 0 16px 40px rgba(8, 6, 14, 0.45);
+  --shadow-float: 0 16px 40px rgba(0, 0, 0, 0.55);
   --header-h: 64px;
   --tab-h: 64px;
   --content: 1200px;
   --content-wide: 1280px;
 
   --ease: 180ms ease;
-  --focus: 2px solid var(--accent);
+  --focus: 2px solid var(--accent-2);
 }
 
-html[data-theme="ice"] {
-  --accent: #7c6cff;
-  --accent-2: #c4b5fd;
-  --accent-deep: #4c1d95;
-  --accent-rgb: 124 108 255;
-  --accent-2-rgb: 196 181 253;
+:root { color-scheme: dark; }
+
+html[data-theme="light"] {
+  color-scheme: light;
+  --ink: #f3ead6;
+  --ink-2: #e8dcc2;
+  --ink-3: #fff8ea;
+  --paper: #1c150a;
+  --paper-dim: rgba(28, 21, 10, 0.92);
+  --paper-mute: rgba(28, 21, 10, 0.58);
+
+  --accent: #b8922a;
+  --accent-2: #8f6f14;
+  --accent-deep: #6e5410;
+  --accent-rgb: 184 146 42;
+  --accent-2-rgb: 143 111 20;
   --accent-glow: rgb(var(--accent-rgb) / 0.28);
-  --accent-soft: rgb(var(--accent-rgb) / 0.12);
-  --gold: #b8c4f0;
+  --accent-soft: rgb(var(--accent-rgb) / 0.14);
+  --on-accent: #fff8ea;
+
+  --gold: #8f6f14;
+  --gold-2: #5c4708;
+  --gold-glow: rgba(184, 146, 42, 0.22);
+
+  --rule: rgba(28, 21, 10, 0.12);
+  --rule-bold: rgba(184, 146, 42, 0.42);
+  --hairline: rgba(28, 21, 10, 0.08);
+  --hairline-strong: rgba(184, 146, 42, 0.28);
+  --chrome: rgba(243, 234, 214, 0.94);
+  --scrim: rgba(20, 15, 8, 0.48);
+  --chip-bg: rgba(28, 21, 10, 0.04);
+  --chip-border: rgba(28, 21, 10, 0.16);
+
   --cinnabar: var(--accent);
   --cinnabar-hover: var(--accent-2);
+  --stone: var(--ink);
+  --panel: var(--ink-3);
+  --line: var(--rule-bold);
+  --muted: var(--paper-mute);
+  --night: var(--ink-2);
+  --night-panel: var(--ink-3);
+  --night-line: var(--hairline-strong);
+  --porcelain: var(--paper);
+  --copper: #a86c28;
   --protocol: var(--accent);
   --signal: var(--accent-2);
+  --shadow-float: 0 16px 40px rgba(80, 60, 10, 0.16);
 }
 
 @media (min-width: 1440px) {

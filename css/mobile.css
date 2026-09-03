@@ -1,4 +1,4 @@
-/* 新色 XINSE — 手機／窄螢幕版面
+/* 尚豪 — 手機／窄螢幕版面
    桌面維持雜誌編排；<1024px 改成 App 殼：緊湊頂欄、直式封面、底部分頁。 */
 
 html {
@@ -60,7 +60,12 @@ button, a, input, select, textarea {
   .brand-en,
   .brand-name-en { display: none; }
 
-  .header-contacts { display: none; }
+  .header-contacts {
+    display: flex;
+    margin-left: auto;
+    gap: 6px;
+  }
+  .header-contacts [data-auth-label] { display: none; }
 
   .header-actions .btn-solid,
   .header-actions .btn-ghost { display: none; }
@@ -92,7 +97,7 @@ button, a, input, select, textarea {
 
   .hero-slide__overlay {
     background:
-      linear-gradient(to top, rgba(10, 8, 16, 0.92) 0%, rgba(10, 8, 16, 0.45) 42%, rgba(10, 8, 16, 0.18) 100%);
+      linear-gradient(to top, rgba(7, 6, 5, 0.62) 0%, rgba(7, 6, 5, 0.18) 46%, rgba(7, 6, 5, 0.06) 100%);
   }
 
   .hero-slide__edition { top: 14px; left: 14px; }

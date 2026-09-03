@@ -3,7 +3,7 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  background: #0a0a0f;
+  background: var(--ink);
   border-bottom: 1px solid var(--rule);
 }
 .hero-carousel__track { position: relative; width: 100%; }
@@ -30,15 +30,20 @@
   object-fit: cover;
   object-position: center 20%;
   z-index: 0;
-  filter: saturate(0.88) contrast(1.05) brightness(0.72);
+  filter: saturate(1.06) contrast(1.04) brightness(1.08) sepia(0.04);
+  pointer-events: none;
+}
+video.hero-slide__img {
+  object-fit: cover;
+  background: var(--ink);
 }
 .hero-slide__overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
   background:
-    linear-gradient(to right, rgba(18,8,32,0.86) 0%, rgba(40,16,64,0.45) 42%, transparent 72%),
-    linear-gradient(to top, rgba(12,6,22,0.62) 0%, transparent 42%);
+    linear-gradient(to right, rgba(7,6,5,0.38) 0%, rgba(7,6,5,0.1) 36%, transparent 66%),
+    linear-gradient(to top, rgba(7,6,5,0.28) 0%, transparent 48%);
 }
 .hero-slide__edition {
   position: absolute;
@@ -77,6 +82,7 @@
   text-transform: uppercase;
   color: var(--accent-2);
   margin-bottom: 12px;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.55);
 }
 .hero-slide__title {
   font-family: var(--display-zh);
@@ -84,6 +90,7 @@
   font-weight: 700;
   line-height: 0.98;
   letter-spacing: 0.02em;
+  text-shadow: 0 2px 22px rgba(0,0,0,0.55);
 }
 .hero-slide__title em {
   display: block;
@@ -100,6 +107,7 @@
   max-width: 28rem;
   color: var(--paper-dim);
   font-size: 15px;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.5);
 }
 .hero-slide__cta {
   margin-top: 22px;
@@ -110,11 +118,11 @@
   padding: 12px 22px;
   border-radius: 999px;
   background: var(--accent);
-  color: #fff;
+  color: var(--on-accent);
   font-weight: 700;
   box-shadow: 0 4px 18px var(--accent-glow);
 }
-.hero-slide__cta:hover { background: var(--accent-2); }
+.hero-slide__cta:hover { background: var(--accent-2); color: var(--on-accent); }
 
 .hero-nav {
   position: absolute;
@@ -355,7 +363,7 @@
   padding: 12px 22px;
   border-radius: 999px;
   background: var(--accent);
-  color: #fff;
+  color: var(--on-accent);
   font-weight: 700;
 }
 .banner-cta-line {
@@ -385,7 +393,7 @@
   padding: 0 8px;
   border-radius: 4px;
   background: var(--accent);
-  color: #fff;
+  color: var(--on-accent);
   font-size: 12px;
 }
 
@@ -559,7 +567,7 @@
 }
 .side-nav a[aria-current="page"] {
   background: var(--accent);
-  color: #fff;
+  color: var(--on-accent);
   border-color: var(--accent);
 }
 @media (min-width: 768px) {

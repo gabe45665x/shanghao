@@ -1,6 +1,10 @@
-# 新色 XINSE — 示範站
+# 尚豪 — 示範站
 
-私人檔期協議的靜態介面示範。名單、回報、邀約皆虛構。限 18 歲以上。
+私人檔期協議的靜態介面。限 18 歲以上。
+
+## 公開網址
+
+https://gabe45665x.github.io/xinse-preview/
 
 ## 目錄
 
@@ -29,7 +33,11 @@ node serve.mjs
 
 ## 公開給別人看
 
-1. **GitHub Pages（固定網址，關電腦也還在）**  
+1. **雲端主機（關電腦也還在，外網可開）**  
+   http://45.76.214.15:8787/  
+   http://45.76.214.15/
+
+2. **GitHub Pages（部分網路會打不開 github.io）**  
    https://gabe45665x.github.io/xinse-preview/
 
 2. **臨時公開隧道**  

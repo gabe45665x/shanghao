@@ -4,10 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta http-equiv="refresh" content="0; url=index.html">
-  <title>新色</title>
-  <link rel="stylesheet" href="css/tokens.css">
+  <title>尚豪</title>
+  <link rel="stylesheet" href="css/tokens.css?v=gold4">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("xinse-theme") || "dark";
+        if (t === "light" || t === "ice") document.documentElement.setAttribute("data-theme", "light");
+      } catch (e) {}
+    })();
+  </script>
 </head>
-<body style="background:#0a0a0c;color:#fdfbf8;font-family:sans-serif;padding:48px 20px">
-  <p>找不到這一頁。<a href="index.html" style="color:#c77dff">回首頁</a></p>
+<body style="background:#070605;color:#f6edd4;font-family:sans-serif;padding:48px 20px">
+  <p>找不到這一頁。<a href="index.html" style="color:#f0d060">回首頁</a></p>
 </body>
 </html>
