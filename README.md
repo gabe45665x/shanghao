@@ -4,7 +4,7 @@
 
 ## 公開網址
 
-https://gabe45665x.github.io/xinse-preview/
+https://gabe45665x.github.io/shanghao/
 
 ## 目錄
 
@@ -33,12 +33,8 @@ node serve.mjs
 
 ## 公開給別人看
 
-1. **雲端主機（關電腦也還在，外網可開）**  
-   http://45.76.214.15:8787/  
-   http://45.76.214.15/
-
-2. **GitHub Pages（部分網路會打不開 github.io）**  
-   https://gabe45665x.github.io/xinse-preview/
+1. **GitHub Pages（部分網路會打不開 github.io）**  
+   https://gabe45665x.github.io/shanghao/
 
 2. **臨時公開隧道**  
    先開 `雙擊預覽.bat`，再雙擊 `公開預覽.bat`。視窗會印出 `https://*.trycloudflare.com` 連結，關掉視窗連結就失效。
