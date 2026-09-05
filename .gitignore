@@ -4,3 +4,6 @@ _source/
 Thumbs.db
 desktop.ini
 node_modules/
+
+# 本機預覽工具產生的設定，不屬於網站
+.claude/
