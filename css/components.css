@@ -240,6 +240,7 @@ html[data-theme="light"] .theme-toggle .ic-moon { display: inline-block; }
 .nav-menu-btn {
   width: 44px;
   height: 38px;
+  flex-shrink: 0;
   border: 1px solid var(--hairline-strong);
   background: transparent;
   border-radius: 999px;
@@ -750,7 +751,7 @@ a[href^="login.html?"],
 }
 
 /* 2026-09-05 業主指示：隱藏 header 的 LINE／Telegram 兩顆聯絡鈕。
-   用 CSS 而不是刪 markup——index.html 是靜態寫死的，其餘 18 個內頁是 js/app.js:169
+   用 CSS 而不是刪 markup——index.html 是靜態寫死的，其餘 16 個內頁是 js/app.js:169
    動態注入的，刪 HTML 擋不掉注入。這條同時蓋掉兩種來源。
    旁邊的「登入」鈕不受影響；側欄選單裡的 LINE／Telegram 文字連結（app.js:191）也保留。
 
@@ -759,7 +760,7 @@ a[href^="login.html?"],
    加回 css/mobile.css，讓兩顆鈕在 ≤440px 收成純圖示（clip 隱藏文字，
    螢幕閱讀器仍讀得到）：
 
-     @media (max-width: 440px) {
+     @media (max-width: 447px) {
        .header-contact-btn span {
          position: absolute; width: 1px; height: 1px;
          padding: 0; margin: -1px; overflow: hidden;
