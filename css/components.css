@@ -753,6 +753,19 @@ a[href^="login.html?"],
    用 CSS 而不是刪 markup——index.html 是靜態寫死的，其餘 18 個內頁是 js/app.js:169
    動態注入的，刪 HTML 擋不掉注入。這條同時蓋掉兩種來源。
    旁邊的「登入」鈕不受影響；側欄選單裡的 LINE／Telegram 文字連結（app.js:191）也保留。
-   要復原：刪掉這一段即可。 */
+
+   ⚠️ 要復原這兩顆鈕：刪掉這一段就會回來，但品牌名是 5 字（飛田新天地），
+   header 在 375px 會溢出 27px、漢堡選單鈕被擠出畫面。復原時請一併把下面這段
+   加回 css/mobile.css，讓兩顆鈕在 ≤440px 收成純圖示（clip 隱藏文字，
+   螢幕閱讀器仍讀得到）：
+
+     @media (max-width: 440px) {
+       .header-contact-btn span {
+         position: absolute; width: 1px; height: 1px;
+         padding: 0; margin: -1px; overflow: hidden;
+         clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+       }
+       .header-contact-btn { padding: 0 9px; }
+     } */
 .header-contact-line,
 .header-contact-tg { display: none; }

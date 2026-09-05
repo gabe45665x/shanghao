@@ -317,21 +317,3 @@ button, a, input, select, textarea {
   .hero-slide__title { font-size: clamp(28px, 6vw, 40px); }
   .hero-slide__desc { -webkit-line-clamp: 2; }
 }
-
-/* 品牌名改為 5 字後 header 放不下帶文字的聯絡鈕（375px 溢出 27px）。
-   ≤440px 收成純圖示：用 clip 視覺隱藏而非 display:none，螢幕閱讀器仍讀得到 LINE／Telegram。 */
-@media (max-width: 440px) {
-  .header-contact-btn span {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    white-space: nowrap;
-    border: 0;
-  }
-
-  .header-contact-btn { padding: 0 9px; }
-}
