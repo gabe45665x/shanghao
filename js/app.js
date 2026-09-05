@@ -1,4 +1,4 @@
-/* 尚豪 — 共用互動：年齡閘、導覽、城市、邀約、示範登入 */
+/* 飛田新天地 — 共用互動：年齡閘、導覽、城市、邀約、示範登入 */
 (function () {
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
@@ -94,9 +94,9 @@
     }
   })();
 
-  /* Brand mark: 尚豪 → 尚[em]豪 */
+  /* Brand mark: 飛田新天地 → 飛田[em]新天地 */
   $$(".brand-word, .brand-name-zh").forEach((el) => {
-    if (!el.querySelector("em")) el.innerHTML = "尚<em>豪</em>";
+    if (!el.querySelector("em")) el.innerHTML = "飛田<em>新天地</em>";
   });
 
   /* Theme: dark / light */
@@ -142,9 +142,9 @@
     side.className = "sidebar";
     side.id = "sidebar";
     side.hidden = true;
-    side.innerHTML = `<p class="kicker">尚豪 · MENU</p>
+    side.innerHTML = `<p class="kicker">飛田新天地 · MENU</p>
       <img src="img/logo-mark.jpg?v=s2" alt="" width="56" height="56" class="logo-mark" style="margin:8px 0 12px;width:56px;height:56px;grid-column:auto;grid-row:auto">
-      <h2 style="margin:8px 0 16px">尚<em style="color:var(--accent);font-style:normal">豪</em></h2>
+      <h2 style="margin:8px 0 16px">飛田<em style="color:var(--accent);font-style:normal">新天地</em></h2>
       <nav class="side-nav" style="flex-direction:column">
         <a href="index.html">首頁</a>
         <a href="select.html">認證檔期</a>
@@ -314,13 +314,13 @@
     const wrap = document.createElement("div");
     wrap.innerHTML = `<div class="age-gate" id="age-gate" role="dialog" aria-modal="true">
       <div class="age-card">
-        <img src="img/logo-mark.jpg?v=s2" alt="尚豪" width="96" height="96" class="logo-mark">
+        <img src="img/logo-mark.jpg?v=s2" alt="飛田新天地" width="96" height="96" class="logo-mark">
         <p class="kicker">PROTOCOL / 18+</p>
-        <h2>進入尚<em style="color:var(--accent);font-style:normal">豪</em>協議</h2>
+        <h2>進入飛田<em style="color:var(--accent);font-style:normal">新天地</em>協議</h2>
         <p>本站限年滿 18 歲者瀏覽。未滿 18 歲請離開。</p>
         <label class="age-check"><input id="age-confirm" type="checkbox"> 我已年滿 18 歲，並接受條款。</label>
         <div class="age-actions">
-          <button class="btn btn-solid" type="button" id="age-enter">進入尚豪</button>
+          <button class="btn btn-solid" type="button" id="age-enter">進入飛田新天地</button>
           <button class="btn btn-night" type="button" id="age-leave">離開</button>
         </div>
       </div>
@@ -347,7 +347,7 @@
     toggle.setAttribute("aria-expanded", open ? "true" : "false");
   });
 
-  /* Listings from data.js — keep 尚豪卡片／規格卡結構 */
+  /* Listings from data.js — keep 飛田新天地卡片／規格卡結構 */
   const DATA = window.XINSE_DATA;
   const profiles = DATA?.profiles || [];
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({
@@ -482,7 +482,7 @@
     const cap = $("#captcha")?.value.trim();
     if (!user || !pass) { toast("請完整填寫"); return; }
     if (pass !== pass2) { toast("兩次密碼不一致"); return; }
-    if (cap && cap.toUpperCase() !== "尚豪") { toast("驗證碼不正確（示範：尚豪）"); return; }
+    if (cap && cap.toUpperCase() !== "飛田新天地") { toast("驗證碼不正確（示範：飛田新天地）"); return; }
     sessionStorage.setItem("xinse-user", user);
     toast("帳號已建立");
     const next = new URLSearchParams(location.search).get("next") || "account.html";
@@ -570,7 +570,7 @@
     if (!p) {
       profileRoot.innerHTML = `<p class="lede">找不到這份檔案。</p>`;
     } else {
-      document.title = `${p.name} ${p.protocol} · 尚豪`;
+      document.title = `${p.name} ${p.protocol} · 飛田新天地`;
       const reports = (window.XINSE_DATA.reports && window.XINSE_DATA.reports[p.id]) || [];
       const extras = p.extras || [];
       const galleryImgs = (p.gallery || []).map((src) =>

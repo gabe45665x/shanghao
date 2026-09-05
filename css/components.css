@@ -95,9 +95,10 @@
   grid-column: 2;
   grid-row: 1;
   font-family: var(--display-zh);
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 500;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
   display: inline-flex;
   align-items: baseline;
   gap: 2px;
@@ -283,7 +284,7 @@ html[data-theme="light"] .theme-toggle .ic-moon { display: inline-block; }
   .nav-toggle, .nav-menu-btn { display: none; }
   .nav-mobile { display: none !important; }
   .header-inner, .header { padding: 14px 28px; }
-  .brand-word, .brand-name-zh { font-size: 30px; }
+  .brand-word, .brand-name-zh { font-size: 24px; }
   .brand img, .brand-name img { width: 56px; height: 56px; }
   .brand, .brand-name { grid-template-columns: 56px auto; }
 }
@@ -747,3 +748,11 @@ a[href^="login.html?"],
   border-color: var(--accent);
   color: var(--on-accent);
 }
+
+/* 2026-09-05 業主指示：隱藏 header 的 LINE／Telegram 兩顆聯絡鈕。
+   用 CSS 而不是刪 markup——index.html 是靜態寫死的，其餘 18 個內頁是 js/app.js:169
+   動態注入的，刪 HTML 擋不掉注入。這條同時蓋掉兩種來源。
+   旁邊的「登入」鈕不受影響；側欄選單裡的 LINE／Telegram 文字連結（app.js:191）也保留。
+   要復原：刪掉這一段即可。 */
+.header-contact-line,
+.header-contact-tg { display: none; }
