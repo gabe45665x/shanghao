@@ -70,7 +70,7 @@ server.listen(PORT, HOST, () => {
       if (a.family === "IPv4" && !a.internal) lan.push(a.address);
     }
   }
-  console.log(`飛田新天地 本機  http://127.0.0.1:${PORT}/`);
-  lan.forEach((ip) => console.log(`飛田新天地 區網  http://${ip}:${PORT}/`));
+  console.log(`TAIWAN 本機  http://127.0.0.1:${PORT}/`);
+  lan.forEach((ip) => console.log(`TAIWAN 區網  http://${ip}:${PORT}/`));
   console.log("對手機／公共網路：請再跑 公開預覽.bat 或看 README 的 GitHub Pages 連結。");
 });

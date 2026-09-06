@@ -1,4 +1,4 @@
-/* 飛田新天地檔期 — 文字與肖像來自來源站名單 */
+/* TAIWAN檔期 — 文字與肖像來自來源站名單 */
 window.XINSE_DATA = {
   contact: {
     line: "",
