@@ -321,11 +321,15 @@ button, a, input, select, textarea {
 /* 2026-09-06 品牌名改成 TAIWAN 之後，首頁 header 標誌下方那行小字
    原本是「品牌名 · 國別」＝「飛田新天地 · TAIWAN」，現在會變成「TAIWAN · TAIWAN」，
    跟正上方的大字整個重複，所以隱藏這一行。大字仍顯示 TAIWAN。
-   只鎖 .brand-name-en（首頁專用）；15 個內頁用的是 .brand-en，維持原樣不受影響。
+   首頁是 .brand-name-en，15 個內頁是 .brand-en，兩個都收掉：內頁的小字本來就寫死
+   "TAIWAN"，大字改成 TAIWAN 之後同樣是上下重複。
+   （內頁小字在 ≤1023px 早就被本檔 @media 隱藏，所以這條實際只影響桌機 ≥1024px。）
+   內頁的大字 .brand-word 仍在，連結不會因此失去可讀名稱。
 
    這裡用 display:none 而不是 clip：品牌名已經由正上方的大字提供，
    若用 clip 保留給輔助技術，螢幕閱讀器會把這個連結唸成
    「TAIWAN TAIWAN · TAIWAN」，反而更糟。沒有無障礙損失。
 
    要讓它顯示回來：刪掉這一段。 */
-.brand-name-en { display: none; }
+.brand-name-en,
+.brand-en { display: none; }
