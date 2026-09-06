@@ -212,6 +212,10 @@ video.hero-slide__img {
 
 /* Homepage discovery */
 .home-discovery { display: grid; gap: 28px; }
+/* grid item 的 min-width 預設是 auto，會被裡面橫滑軌的內容撐開：
+   .daily-shot__rail / .area-shortcuts 的 overflow-x:auto 因此完全失效，
+   整個頁面被撐到 2400px 以上（窄視窗只看得到 2 張卡，桌機 rail-nav 按鈕跑到畫面外）。*/
+.home-discovery > * { min-width: 0; }
 
 .today-online__head,
 .daily-shot__head {

@@ -354,9 +354,12 @@
     "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
   }[c]));
   const typeShort = (p) => ({ select: "認證", studio: "工坊", signal: "訊號" }[p.type] || p.typeLabel);
+  // open:false = 報班表標了今日休息。用 === false，沒有這個欄位的資料（手動刊登的工坊）不受影響。
+  const restBadge = (p) => (p.open === false ? '<span class="rest-badge">此時段未開放</span>' : "");
+  const restClass = (p) => (p.open === false ? " is-rest" : "");
 
-  const homeCard = (p) => `<a class="card wave-${esc(p.type)}" href="profile.html?id=${esc(p.id)}" data-city="${esc(p.city)}">
-          <div class="card-media"><img src="${esc(p.image)}" alt="${esc(p.name)}" width="720" height="960"></div>
+  const homeCard = (p) => `<a class="card wave-${esc(p.type)}${restClass(p)}" href="profile.html?id=${esc(p.id)}" data-city="${esc(p.city)}">
+          <div class="card-media">${restBadge(p)}<img src="${esc(p.image)}" alt="${esc(p.name)}" width="720" height="960"></div>
           <div class="card-body">
             <span class="card-id">${esc(p.protocol)} · ${typeShort(p)}</span>
             <span class="card-name">${esc(p.name)}</span>
@@ -364,10 +367,10 @@
           </div>
         </a>`;
 
-  const shotCard = (p) => `<a class="shot-card" href="profile.html?id=${esc(p.id)}" data-city="${esc(p.city)}"><img src="${esc(p.image)}" alt="${esc(p.name)}"><span>${esc(p.name)} · ${esc(p.cityName)}</span></a>`;
+  const shotCard = (p) => `<a class="shot-card${restClass(p)}" href="profile.html?id=${esc(p.id)}" data-city="${esc(p.city)}">${restBadge(p)}<img src="${esc(p.image)}" alt="${esc(p.name)}"><span>${esc(p.name)} · ${esc(p.cityName)}</span></a>`;
 
-  const specCard = (p) => `<article class="spec-card" data-city="${esc(p.city)}">
-        <div class="card-media"><img src="${esc(p.image)}" alt="${esc(p.name)}" width="720" height="960"></div>
+  const specCard = (p) => `<article class="spec-card${restClass(p)}" data-city="${esc(p.city)}">
+        <div class="card-media">${restBadge(p)}<img src="${esc(p.image)}" alt="${esc(p.name)}" width="720" height="960"></div>
         <div class="card-body" style="padding:24px">
           <span class="card-id">${esc(p.protocol)}</span>
           <h2 class="card-name">${esc(p.name)}</h2>
