@@ -317,3 +317,39 @@ button, a, input, select, textarea {
   .hero-slide__title { font-size: clamp(28px, 6vw, 40px); }
   .hero-slide__desc { -webkit-line-clamp: 2; }
 }
+
+/* 2026-09-06 業主指示：**只有首頁** header 只留標誌，品牌文字不顯示
+   （大字「飛田新天地」與下方小字「飛田新天地 · TAIWAN」），桌機與手機一致。
+   15 個內頁的品牌文字保留原樣 —— 內頁用的是 .brand / .brand-word / .brand-en，
+   首頁用的是 .brand-name / .brand-name-zh / .brand-name-en，靠這個區分鎖定範圍，
+   所以下面只寫 .brand-name* 系列，千萬別順手加上 .brand-word / .brand-en。
+
+   放在 mobile.css 末尾、且不包 @media：這支是最後載入的樣式表，
+   這樣才蓋得掉 components.css 的基準規則與本檔 @media 區塊裡的品牌字設定。
+
+   用 clip 視覺隱藏而不是 display:none：畫面上看不到、也不佔版面空間，
+   但螢幕閱讀器仍讀得到完整的「飛田新天地 · TAIWAN」。
+   （首頁標誌的 alt 有字，即使 display:none 連結也還有名稱；但內頁的標誌是
+   <img alt="">，若日後要把這條擴大套用到內頁，務必沿用 clip，別改成 display:none，
+   否則那 15 個回首頁的連結會變成沒有可讀名稱的無名連結。）
+
+   要復原：刪掉這一整段。 */
+.brand-name-zh,
+.brand-name-en {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* 文字抽離版面後，grid 的第二欄與欄距要一起收掉，標誌右邊才不會留下空隙 */
+.brand-name {
+  position: relative;
+  grid-template-columns: auto;
+  column-gap: 0;
+}
